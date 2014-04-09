@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace ProposalSimulator
 {
+    using ProposalSimulator.ViewModels;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -23,6 +25,19 @@ namespace ProposalSimulator
         public MainWindow()
         {
             InitializeComponent();
+            MainContentControl.Content = FindResource("SimpleView");
+            AdvancedViewModel.NeedToChangeContent += AdvancedViewModel_NeedToChangeContent;
+            SimpleViewModel.NeedToChangeContent += SimpleViewModel_NeedToChangeContent;
+        }
+
+        void SimpleViewModel_NeedToChangeContent(object o, Controls.NeedToChangeContentEventArg e)
+        {
+            MainContentControl.Content = FindResource("AdvancedView");
+        }
+
+        void AdvancedViewModel_NeedToChangeContent(object o, Controls.NeedToChangeContentEventArg e)
+        {
+            MainContentControl.Content = FindResource("SimpleView");
         }
     }
 }

@@ -1,8 +1,16 @@
 ﻿<Window x:Class="ProposalSimulator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:Ctrls="clr-namespace:ProposalSimulator.Controls"
+        xmlns:Views="clr-namespace:ProposalSimulator.Views"
+        Title="ProposalSimulator" Height="350" Width="525">
+    <Window.Resources>
+        <Views:SimpleView x:Key="SimpleView"/>
+        <Views:AdvancedView x:Key="AdvancedView"/>
+    </Window.Resources>
     <Grid>
-        
+        <Ctrls:ManagedContentControl x:Name="MainContentControl">
+            
+        </Ctrls:ManagedContentControl>
     </Grid>
 </Window>
