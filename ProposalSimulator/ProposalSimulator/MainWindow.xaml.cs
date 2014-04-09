@@ -32,12 +32,12 @@ namespace ProposalSimulator
 
         void SimpleViewModel_NeedToChangeContent(object o, Controls.NeedToChangeContentEventArg e)
         {
-            MainContentControl.Content = FindResource("AdvancedView");
+            MainContentControl.Content = FindResource(e.ViewKey);
         }
 
         void AdvancedViewModel_NeedToChangeContent(object o, Controls.NeedToChangeContentEventArg e)
         {
-            MainContentControl.Content = FindResource("SimpleView");
+            MainContentControl.Content = FindResource(e.ViewKey);
         }
     }
 }
