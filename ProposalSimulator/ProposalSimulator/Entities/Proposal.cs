@@ -12,7 +12,6 @@
         private double _salary;
         private bool _isManager;
 
-
         public long Id
         {
             get { return _id; }
@@ -55,5 +54,5 @@
 
    
      
-    }
+    
 }
