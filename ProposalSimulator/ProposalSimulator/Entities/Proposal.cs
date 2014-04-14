@@ -49,25 +49,5 @@
                 NotifyPropertyChanged("IsManager");
             }
         }
-<<<<<<< HEAD
     }
-=======
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-
-
-   
-     
-    
->>>>>>> 19f4e447d2ae509d9717f18f33833c87ac4778a0
 }
