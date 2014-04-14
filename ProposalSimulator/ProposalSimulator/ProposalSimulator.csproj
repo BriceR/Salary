@@ -55,6 +55,7 @@
     </ApplicationDefinition>
     <Compile Include="Controls\Inputs\RelayCommand.cs" />
     <Compile Include="Entities\BaseObject.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModels\AdvancedViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\SimpleViewModel.cs" />
