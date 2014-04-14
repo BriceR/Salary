@@ -1,59 +1,54 @@
 ﻿namespace ProposalSimulator.Entities
 {
-    using System.Collections.Specialized;
-    using System.ComponentModel;
-    using System.Runtime.CompilerServices;
-    using ProposalSimulator.Annotations;
-
-    public class Proposal : INotifyPropertyChanged
+    public class Proposal : BaseObject
     {
         private long _id;
+        private bool _isManager;
         private string _name;
         private double _salary;
-        private bool _isManager;
 
 
         public long Id
         {
             get { return _id; }
-            private set {  _id = value; }
+            set
+            {
+                _id = value;
+                NotifyPropertyChanged("Id");
+            }
         }
 
         public string Name
         {
             get { return _name; }
 
-            private set { _name = value; }
+            set
+            {
+                _name = value;
+                NotifyPropertyChanged("Name");
+            }
         }
 
         public double Salary
         {
             get { return _salary; }
 
-            private set { _salary = value; }
+            set
+            {
+                _salary = value;
+                NotifyPropertyChanged("Salary");
+            }
         }
 
         public bool IsManager
         {
             get { return _isManager; }
 
-            private set { _isManager = value; }
+            set
+            {
+                _isManager = value;
+                NotifyPropertyChanged("IsManager");
+            }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-
-
-   
-     
     }
 }

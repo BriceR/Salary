@@ -53,10 +53,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\Inputs\RelayCommand.cs" />
+    <Compile Include="Entities\BaseObject.cs" />
     <Compile Include="ViewModels\AdvancedViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\SimpleViewModel.cs" />
     <Compile Include="Views\AdvancedView.xaml.cs">
       <DependentUpon>AdvancedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SimpleView.xaml.cs">
       <DependentUpon>SimpleView.xaml</DependentUpon>
@@ -77,6 +83,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\AdvancedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

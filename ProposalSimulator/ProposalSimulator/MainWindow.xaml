@@ -7,10 +7,19 @@
     <Window.Resources>
         <Views:SimpleView x:Key="SimpleView"/>
         <Views:AdvancedView x:Key="AdvancedView"/>
+        <Views:SettingsView x:Key="SettingsView"/>
     </Window.Resources>
     <Grid>
-        <Ctrls:ManagedContentControl x:Name="MainContentControl">
+        <TabControl>
+            <TabItem Header="Main">
+                <Ctrls:ManagedContentControl x:Name="MainContentControl">
+
+                </Ctrls:ManagedContentControl>
+            </TabItem>
             
-        </Ctrls:ManagedContentControl>
+            <TabItem Header="Settings">
+                <Views:SettingsView/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
